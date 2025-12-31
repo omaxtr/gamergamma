@@ -54,9 +54,9 @@ Built specifically for high-tension **FPS games (Valorant, CS, Tarkov, Dark Soul
 3. Configure your settings
 4. Enable "Start with Windows" for automatic startup
 
-**File**: Standalone executable, no dependencies required.
-*It runs .NET 4.8 which is included in win10/11 by default*.
-**Size**: ~50kb.
+**File**: Standalone executable, no dependencies required.<br>
+*It runs .NET 4.8 included in win10/11 by default*.<br>
+**Size**: ~50kb.<br>
 **Platform**: Windows 10/11 (64-bit).
 
 ---
@@ -67,6 +67,7 @@ Built specifically for high-tension **FPS games (Valorant, CS, Tarkov, Dark Soul
 Built with ❤️ for gamers by gamer.
 Implementation: **omaxtr**
 Logic Assistant: **Antigravity AI**
+
 
 
 
