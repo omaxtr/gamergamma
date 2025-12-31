@@ -47,12 +47,26 @@ Built specifically for high-tension **FPS games (Valorant, CS, Tarkov, Dark Soul
 
 ---
 
+## 📥 Download & Install
+
+1. Download `GamerGamma.exe` from the releases
+2. Run it - no installation needed!
+3. Configure your settings
+4. Enable "Start with Windows" for automatic startup
+
+**File**: Standalone executable, no dependencies required  
+**Size**: ~154 MB (includes .NET runtime)  
+**Platform**: Windows 10/11 (64-bit)
+
+---
+
 ## Credits & Inspiration
 **Gamer Gamma** is the spiritual successor to **Gamma Panel**. When the legend stopped working on modern Windows, Gamer Gamma was born to keep the legacy alive.
 
 Built with ❤️ for gamers by gamer.
 Implementation: **omaxtr**
 Logic Assistant: **Antigravity AI**
+
 
 
 
