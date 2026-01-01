@@ -683,9 +683,9 @@ body {
     background: linear-gradient(
         90deg, 
         rgba(5, 5, 8, 0.85) 0%,         /* Heavy dark overlay at the very edge */
-        rgba(168, 85, 247, 0.2) 35%,    /* Your Brand Purple (Simulating darkness) */
+        rgba(168, 85, 247, 0.2) 40%,    /* Your Brand Purple (Simulating darkness) */
         rgba(212, 175, 55, 0.1) 55%,    /* Your Brand Gold (Transition point) */
-        rgba(212, 175, 55, 0) 100%      /* Crystal Clear edge (The Result) */
+        rgba(212, 175, 55, 0.2) 100%      /* Crystal Clear edge (The Result) */
     ) !important;
 }
 
@@ -1041,6 +1041,7 @@ body {
         text-align: center;
     }
 }
+
 
 
 
