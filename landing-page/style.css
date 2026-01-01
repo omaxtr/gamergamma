@@ -1052,46 +1052,50 @@ body {
     }
 }
 
-/* 1. Define the pulse specifically for the bulb shape */
-@keyframes bulb-pulse {
+/* 1. The Pulse Keyframes - Pure Amber/Gold */
+@keyframes bulb-pulse-gold {
     0% {
-        /* Subtle glow following the bulb path */
-        filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.4));
+        /* Minimal Amber Glow */
+        filter: drop-shadow(0 0 2px #fbbf24) drop-shadow(0 0 5px rgba(251, 191, 36, 0.2));
         transform: scale(1);
     }
     50% {
-        /* Stronger glow + slight expansion */
-        filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.9));
-        transform: scale(1.1); 
+        /* Intense Amber/Yellow Glow + slight scale up */
+        filter: drop-shadow(0 0 10px #fbbf24) 
+                drop-shadow(0 0 20px #f59e0b)
+                drop-shadow(0 0 35px rgba(251, 191, 36, 0.5));
+        transform: scale(1.1);
     }
     100% {
-        filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.4));
+        filter: drop-shadow(0 0 2px #fbbf24) drop-shadow(0 0 5px rgba(251, 191, 36, 0.2));
         transform: scale(1);
     }
 }
 
-/* 2. Apply it specifically to the logo SVG */
-.logo svg {
-    /* This forces the animation to ignore square boundaries */
+/* 2. Apply it to the Logo SVG specifically */
+.header .logo svg {
+    /* Critical: This allows the glow to spread outside the 32x32 box */
     overflow: visible !important; 
     
-    /* Apply the pulse logic */
-    animation: bulb-pulse 3s ease-in-out infinite !important;
+    /* Apply the 3s pulse matching your button */
+    animation: bulb-pulse-gold 3s ease-in-out infinite !important;
     
-    /* Pulse from the center of the bulb, not the corner */
-    transform-origin: center center;
+    /* Ensure it pulses from the center */
+    transform-origin: center center !important;
     
-    /* Fix for some browsers seeing a box */
+    /* Remove any leftover square box shadows or backgrounds */
     background: transparent !important;
-    box-shadow: none !important; 
+    box-shadow: none !important;
+    border: none !important;
 }
 
-/* 3. Ensure the container doesn't clip the glow */
-.logo {
+/* 3. Helper to ensure the parent container doesn't cut the light */
+.header .logo {
+    overflow: visible !important;
     display: flex;
     align-items: center;
-    overflow: visible !important;
 }
+
 
 
 
