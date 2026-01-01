@@ -920,23 +920,29 @@ body {
 }
 
 /* 2. The VirusTotal "Pill" Style */
-.vt-pill {
+.vt-pill, 
+.vt-pill:link, 
+.vt-pill:visited {
     display: inline-flex;
     align-items: center;
     gap: 12px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 6px 20px 6px 14px; /* Adjusted padding */
-    border-radius: 12px; /* Slightly squarer corners look better for badges */
-    text-decoration: none;
+    padding: 6px 20px 6px 14px;
+    border-radius: 12px;
+    text-decoration: none !important; /* Force no underline */
     transition: all 0.2s ease;
-    height: 54px; /* Matches the standard height of your Download button */
+    height: 54px;
+    cursor: pointer;
+    color: #22c55e !important; /* Forces the overall button/icon color to Green */
 }
 
 .vt-pill:hover {
     background: rgba(34, 197, 94, 0.1);
     border-color: rgba(34, 197, 94, 0.4);
     transform: translateY(-2px);
+    cursor: pointer;
+    color: #22c55e !important; /* Keep it green on hover */
 }
 
 /* New: Wrapper for the stacked text */
@@ -1010,6 +1016,7 @@ body {
         text-align: center;
     }
 }
+
 
 
 
