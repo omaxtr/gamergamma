@@ -908,5 +908,86 @@ body {
     .support-block {
         align-items: center;
     }
+
+   /* 1. Layout for the Primary Row (Download + Badge) */
+.hero-buttons-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap; /* Wraps buttons on mobile */
 }
+
+/* 2. The VirusTotal "Pill" Style */
+.vt-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 16px;
+    border-radius: 50px; /* Pill shape */
+    text-decoration: none;
+    color: #a0a0b0; /* Professional Gray Text */
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.vt-pill:hover {
+    background: rgba(34, 197, 94, 0.1);
+    border-color: rgba(34, 197, 94, 0.5);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* 3. Layout for Secondary Column (GitHub + Coffee) */
+.hero-extra-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.cta-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+    font-style: italic;
+}
+
+.github-link {
+    color: var(--purple-500);
+    text-decoration: none;
+    font-style: italic;
+    font-size: 0.85rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.github-link:hover {
+    border-bottom-color: var(--purple-500);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero-buttons-row {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    .btn-large, .vt-pill {
+        width: 100%; /* Full width buttons on phone */
+        justify-content: center;
+    }
+
+    .hero-extra-links {
+        align-items: center;
+        text-align: center;
+    }
+}
+
 
