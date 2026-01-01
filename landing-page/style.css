@@ -1052,6 +1052,46 @@ body {
     }
 }
 
+/* 1. Define the pulse specifically for the bulb shape */
+@keyframes bulb-pulse {
+    0% {
+        /* Subtle glow following the bulb path */
+        filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.4));
+        transform: scale(1);
+    }
+    50% {
+        /* Stronger glow + slight expansion */
+        filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.9));
+        transform: scale(1.1); 
+    }
+    100% {
+        filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.4));
+        transform: scale(1);
+    }
+}
+
+/* 2. Apply it specifically to the logo SVG */
+.logo svg {
+    /* This forces the animation to ignore square boundaries */
+    overflow: visible !important; 
+    
+    /* Apply the pulse logic */
+    animation: bulb-pulse 3s ease-in-out infinite !important;
+    
+    /* Pulse from the center of the bulb, not the corner */
+    transform-origin: center center;
+    
+    /* Fix for some browsers seeing a box */
+    background: transparent !important;
+    box-shadow: none !important; 
+}
+
+/* 3. Ensure the container doesn't clip the glow */
+.logo {
+    display: flex;
+    align-items: center;
+    overflow: visible !important;
+}
 
 
 
