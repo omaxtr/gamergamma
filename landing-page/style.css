@@ -985,16 +985,11 @@ body {
 }
 
 .github-link {
-    color: var(--text-primary);
-    text-decoration: none;
+    all: unset;
     font-style: italic;
     font-size: 0.75rem;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
-}
-
-.github-link:hover {
-    border-bottom-color: var(--text-primary);
+    cursor: pointer;
+    color: #ffffff; /* Manually set it to white after unsetting */
 }
 
 /* Mobile Adjustments */
@@ -1015,6 +1010,7 @@ body {
         text-align: center;
     }
 }
+
 
 
 
