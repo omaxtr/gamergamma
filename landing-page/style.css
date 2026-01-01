@@ -845,6 +845,11 @@ body {
         align-items: center;
     }
 }
+
+/* =========================================
+   VIRUSTOTAL BUTTON (LOCKED)
+   ========================================= */
+
 /* 1. Layout Container */
 .hero-buttons-row {
     display: flex;
@@ -854,32 +859,47 @@ body {
     margin-top: 30px;
     margin-bottom: 20px;
     flex-wrap: wrap;
+    /* Ensure no parent style overrides this */
+    background: transparent !important; 
 }
 
-/* 2. The VirusTotal Button Style */
+/* 2. The Button Style - LOCKED DOWN */
 .btn-vt {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px; /* Space between checkmark and text */
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
     
-    /* Button Shape & Colors */
-    background: rgba(34, 197, 94, 0.08); /* Very subtle green tint background */
-    border: 1px solid rgba(34, 197, 94, 0.3); /* Thin green border */
-    padding: 6px 20px 6px 14px; 
-    border-radius: 12px;
-    height: 54px; /* Matches Download Button Height */
-    text-decoration: none !important; /* No underline ever */
-    transition: all 0.2s ease;
+    /* Force the Dark/Green Look */
+    background-color: rgba(34, 197, 94, 0.08) !important; 
+    border: 1px solid rgba(34, 197, 94, 0.3) !important;
+    padding: 6px 20px 6px 14px !important; 
+    border-radius: 12px !important;
+    height: 54px !important;
+    
+    /* Kill default link styles */
+    text-decoration: none !important;
+    color: inherit !important;
+    box-shadow: none !important;
+    transition: all 0.2s ease !important;
 }
 
 /* Hover Effect */
 .btn-vt:hover {
-    background: rgba(34, 197, 94, 0.15); /* Slightly brighter background */
-    border-color: #22c55e; /* Solid green border */
+    background-color: rgba(34, 197, 94, 0.15) !important;
+    border-color: #22c55e !important;
     transform: translateY(-2px);
 }
 
-/* 3. Text Styling */
+/* 3. The SVG Icon - Force Green */
+.btn-vt svg {
+    stroke: #22c55e !important; /* Force Green Lines */
+    fill: none !important;      /* No White Background fill */
+    background: transparent !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+/* 4. Text Styling - Force Colors */
 .vt-text-stack {
     display: flex;
     flex-direction: column;
@@ -887,47 +907,44 @@ body {
     line-height: 1;
 }
 
-/* "Clean" Text - FORCED GREEN */
 .vt-clean {
-    color: #22c55e !important; /* This !important stops it from turning purple */
-    font-weight: 800;
-    font-size: 1.1rem;
+    color: #22c55e !important; /* Force Green Text */
+    font-weight: 800 !important;
+    font-size: 1.1rem !important;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-decoration: none !important;
 }
 
-/* "VirusTotal" Text - Gray/Green mix */
 .vt-source {
-    color: #8fa; /* Light whitish-green */
-    font-size: 0.65rem;
-    font-weight: 600;
+    color: #8fa !important; /* Force Light Green/Gray */
+    font-size: 0.65rem !important;
+    font-weight: 600 !important;
     text-transform: uppercase;
     opacity: 0.8;
     margin-top: 3px;
+    text-decoration: none !important;
 }
 
-/* Mobile Fix */
-@media (max-width: 768px) {
-    .hero-buttons-row {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .btn-vt {
-        justify-content: center;
-    }
-}
-/* GitHub Link Styling */
+/* =========================================
+   GITHUB LINK (LOCKED)
+   ========================================= */
 .github-link {
-    color: #a855f7; /* Your brand purple */
-    text-decoration: none;
+    color: #a855f7 !important; /* Force Purple */
+    text-decoration: none !important;
     font-weight: 600;
     font-style: italic;
     font-size: 0.85rem;
-    border-bottom: 1px solid transparent; /* Invisible underline by default */
-    transition: all 0.2s ease;
+    background: transparent !important;
+    border-bottom: 1px solid transparent !important;
 }
 
 .github-link:hover {
-    border-bottom-color: #a855f7; /* Purple underline appears on hover */
-    filter: brightness(1.2); /* Slight glow */
+    border-bottom-color: #a855f7 !important;
+    color: #d8b4fe !important; /* Lighter purple on hover */
+}
+
+/* Ensure Visited Links don't turn blue/purple */
+.btn-vt:visited, .github-link:visited {
+    color: inherit;
 }
