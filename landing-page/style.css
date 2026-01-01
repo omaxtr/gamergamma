@@ -994,7 +994,7 @@ body {
 }
 
 .github-link:hover {
-    border-bottom-color: var(--green-500);
+    border-bottom-color: var(--white-500);
 }
 
 /* Mobile Adjustments */
@@ -1015,6 +1015,7 @@ body {
         text-align: center;
     }
 }
+
 
 
 
